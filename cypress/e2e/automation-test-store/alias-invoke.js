@@ -16,13 +16,51 @@ describe("Alias and invoke", () => {
     cy.get("@productThumbnail").should("contain", "Seaweed Conditioner");
 
   });
-  it("Count products in home page", () => {
+  it("Validate product thumbnail", () => {
     cy.visit("https://automationteststore.com/");
 
     cy.get(".thumbnail").as("productThumbnail");
     cy.get("@productThumbnail").should("have.length", 16);
     cy.get("@productThumbnail").find(".productcart").invoke("attr", "title").should("include", "Add to Cart");
-
   });
-  
+  it.only("Calculate total of sale and normal products", () => {
+    cy.visit("https://automationteststore.com/");
+
+    cy.get(".thumbnail").as("productThumbnail");
+    
+    cy.get(".thumbnail").find(".oneprice").invoke("text").as("itemPrice");
+    cy.get(".thumbnail").find(".pricenew").invoke("text").as("saleItemPrice");
+
+    var itemsTotal = 0 ;
+    cy.get("@itemPrice").then(($linkText) => {
+      // Splitting the text based on $ sign to get individual prices and not the full text
+      let itemsTotalPrice = 0;
+      let itemPrice = $linkText.split("$")
+      let i;
+      for (i = 0; i < itemPrice.length; i++) {
+        cy.log(itemPrice[i]);
+        itemsTotalPrice += Number(itemPrice[i]);
+      }
+      itemsTotal += itemsTotalPrice;
+      cy.log("Non sale items:  " + itemsTotalPrice);
+
+    });
+    cy.get("@saleItemPrice").then(($linkText) => {
+      // Splitting the text based on $ sign to get individual prices and not the full text
+      let salesTotalPrice = 0; 
+      let salePrice = $linkText.split("$");
+      let i;
+      for (i = 0; i < salePrice.length; i++) {
+        cy.log(salePrice[i]);
+        salesTotalPrice += Number(salePrice[i]);
+      }
+      itemsTotal += salesTotalPrice;
+      cy.log("Sale items total: " + salesTotalPrice);
+
+    })
+    .then(() => {
+      cy.log("Total of all items: " + itemsTotal);
+      expect(itemsTotal).to.equal(673);
+    });
+  });
 });
