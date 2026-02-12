@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.745" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-12T23:30:13" tests="0" file="cypress\e2e\webdriver-uni\file-upload.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test file upload via webdriveruni" timestamp="2026-02-12T23:30:13" tests="2" time="4.743" failures="0">
+    <testcase name="Test file upload via webdriveruni upload a file..." time="3.463" classname="upload a file...">
+    </testcase>
+    <testcase name="Test file upload via webdriveruni upload a no file..." time="1.084" classname="upload a no file...">
+    </testcase>
+  </testsuite>
+</testsuites>

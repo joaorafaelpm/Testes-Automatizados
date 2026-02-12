@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<testsuites>
+<testsuite name="Root Suite" timestamp="2026-02-12T23:28:11" tests="0" file="cypress\e2e\automation-test-store\contact-us.js" time="0.000" failures="0"></testsuite>
+<testsuite name="test contact us form via Automation Test Store" timestamp="2026-02-12T23:28:11" tests="1" time="11.692" failures="0">
+  
+  <testcase name="test contact us form via Automation Test Store should be able to submit a successful submission via contact us form" time="8.927" classname="should be able to submit a successful submission via contact us form"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:28:55" tests="0" file="cypress\e2e\automation-test-store\iterate-over-elements.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Iterate over elements" timestamp="2026-02-12T23:28:55" tests="3" time="16.652" failures="0">
+  
+  <testcase name="Iterate over elements Log information of all hair care products" time="6.050" classname="Log information of all hair care products"></testcase>
+  
+  <testcase name="Iterate over elements Add specific product to basket" time="4.009" classname="Add specific product to basket"></testcase>
+  
+  <testcase name="Iterate over elements Add another specific product to basket" time="4.103" classname="Add another specific product to basket"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:50" tests="0" file="cypress\e2e\webdriver-uni\traversing-elements.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Traversing DOM elements in Cypress" timestamp="2026-02-12T23:30:50" tests="16" time="15.562" failures="0">
+  
+  <testcase name="Traversing DOM elements in Cypress children() to get the children of DOM elements" time="3.135" classname="children() to get the children of DOM elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress closest() to validate the closest ancestor DOM element" time="0.646" classname="closest() to validate the closest ancestor DOM element"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress eq() to retrieve a specific element based on index" time="0.587" classname="eq() to retrieve a specific element based on index"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress filter() to retrieve DOM elements that match a specific selector" time="0.637" classname="filter() to retrieve DOM elements that match a specific selector"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress find() to retrieve DOM elements of a given selector" time="0.673" classname="find() to retrieve DOM elements of a given selector"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress first() to retrieve the first DOM element within elements " time="0.656" classname="first() to retrieve the first DOM element within elements "></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress last() to retrieve the last DOM element within elements" time="0.608" classname="last() to retrieve the last DOM element within elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress nextAll() to get all of the next sibling DOM elements within elements" time="0.628" classname="nextAll() to get all of the next sibling DOM elements within elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress nextUntil() to get all of the next sibling DOM elements within elements until another element" time="0.602" classname="nextUntil() to get all of the next sibling DOM elements within elements until another element"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress not() to remove DOM element(s) from the set of elements" time="0.612" classname="not() to remove DOM element(s) from the set of elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress parent() To get parent DOM element of elements" time="0.606" classname="parent() To get parent DOM element of elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress parents() to get parents DOM element of elements" time="0.634" classname="parents() to get parents DOM element of elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress prev() to get the previous sibling DOM element within elements" time="0.615" classname="prev() to get the previous sibling DOM element within elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress prevAll() to get all previous sibling DOM elements within elements" time="0.597" classname="prevAll() to get all previous sibling DOM elements within elements"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress prevUntil() to get all previous sibling DOM elements within elements until other element" time="0.633" classname="prevUntil() to get all previous sibling DOM elements within elements until other element"></testcase>
+  
+  <testcase name="Traversing DOM elements in Cypress siblings() To get all sibling DOM elements of elements" time="0.597" classname="siblings() To get all sibling DOM elements of elements"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:22" tests="0" file="cypress\e2e\webdriver-uni\autocomplete-dropdown-list.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Interact with autocomplete dropdown lists" timestamp="2026-02-12T23:29:22" tests="1" time="5.970" failures="0">
+  
+  <testcase name="Interact with autocomplete dropdown lists Select specific product via autocomplete list" time="5.933" classname="Select specific product via autocomplete list"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:27:51" tests="0" file="cypress\e2e\automation-test-store\alias-invoke.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Alias and invoke" timestamp="2026-02-12T23:27:51" tests="3" time="17.421" failures="0">
+  
+  <testcase name="Alias and invoke Validate a specific hair product" time="8.597" classname="Validate a specific hair product"></testcase>
+  
+  <testcase name="Alias and invoke Validate product thumbnail" time="3.989" classname="Validate product thumbnail"></testcase>
+  
+  <testcase name="Alias and invoke Calculate total of sale and normal products" time="1.775" classname="Calculate total of sale and normal products"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:30" tests="0" file="cypress\e2e\webdriver-uni\browser-navigation.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Validate webdrive homepage links" timestamp="2026-02-12T23:29:30" tests="1" time="7.028" failures="0">
+  
+  <testcase name="Validate webdrive homepage links Confirm links redirect to correct pages" time="6.711" classname="Confirm links redirect to correct pages"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:27:34" tests="0" file="cypress\e2e\automation-test-store\add-multiple-itens-to-basket.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Add multiple itens to basket" timestamp="2026-02-12T23:27:34" tests="1" time="15.177" failures="0">
+  
+  <testcase name="Add multiple itens to basket Add specific itens to basket" time="11.217" classname="Add specific itens to basket"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:06" tests="0" file="cypress\e2e\webdriver-uni\dropdown-list.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Interact with dropdown lists" timestamp="2026-02-12T23:30:06" tests="1" time="3.783" failures="0">
+  
+  <testcase name="Interact with dropdown lists Select specific values via dropdown list" time="3.693" classname="Select specific values via dropdown list"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:31:08" tests="0" file="cypress\e2e\other\hooks.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Hooks" timestamp="2026-02-12T23:31:08" tests="2" time="0.120" failures="0">
+  
+  <testcase name="Hooks Example test1" time="0.058" classname="Example test1"></testcase>
+  
+  <testcase name="Hooks Example test2" time="0.015" classname="Example test2"></testcase>
+  
+</testsuite>
+
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:27" tests="0" file="cypress\e2e\webdriver-uni\js-alerts.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Handle js alerts" timestamp="2026-02-12T23:30:27" tests="4" time="5.229" failures="0">
+  
+  <testcase name="Handle js alerts Confirm the js alert contains the correct text" time="3.082" classname="Confirm the js alert contains the correct text"></testcase>
+  
+  <testcase name="Handle js alerts Validate js confirm alert box works correctly when clicks ok" time="0.659" classname="Validate js confirm alert box works correctly when clicks ok"></testcase>
+  
+  <testcase name="Handle js alerts Validate js confirm alert box works correctly when clicks cancel" time="0.684" classname="Validate js confirm alert box works correctly when clicks cancel"></testcase>
+  
+  <testcase name="Handle js alerts Validate js confirm alert box using a stub" time="0.713" classname="Validate js confirm alert box using a stub"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:14" tests="0" file="cypress\e2e\automation-test-store\variables-and-cy-commands.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Verifying variables, cypress commands and jquery commands" timestamp="2026-02-12T23:29:14" tests="1" time="5.615" failures="0">
+  
+  <testcase name="Verifying variables, cypress commands and jquery commands Validate properties from contact us page" time="3.313" classname="Validate properties from contact us page"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:35" tests="0" file="cypress\e2e\webdriver-uni\mouse-actions.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Test mouse actions" timestamp="2026-02-12T23:30:35" tests="1" time="2.662" failures="0">
+  
+  <testcase name="Test mouse actions It should be able to hold down the left mouse click button on a given element" time="2.621" classname="It should be able to hold down the left mouse click button on a given element"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:28:27" tests="0" file="cypress\e2e\automation-test-store\inspect-item.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Inspect Automation Test Store items using chain of commands" timestamp="2026-02-12T23:28:27" tests="3" time="25.555" failures="0">
+  
+  <testcase name="Inspect Automation Test Store items using chain of commands Click on the first item using the item header" time="8.463" classname="Click on the first item using the item header"></testcase>
+  
+  <testcase name="Inspect Automation Test Store items using chain of commands Click on the first item using item text" time="6.884" classname="Click on the first item using item text"></testcase>
+  
+  <testcase name="Inspect Automation Test Store items using chain of commands Click on the first item using index" time="7.156" classname="Click on the first item using index"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:40" tests="0" file="cypress\e2e\webdriver-uni\radio-buttons.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Verify radio buttons via webdriveruni" timestamp="2026-02-12T23:30:40" tests="2" time="3.190" failures="0">
+  
+  <testcase name="Verify radio buttons via webdriveruni Check specific radio buttons" time="2.418" classname="Check specific radio buttons"></testcase>
+  
+  <testcase name="Verify radio buttons via webdriveruni Check specific radio buttons and validate" time="0.688" classname="Check specific radio buttons and validate"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:31:11" tests="0" file="cypress\e2e\other\same-origin-policy.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Cypress web security" timestamp="2026-02-12T23:31:11" tests="2" time="10.370" failures="0">
+  
+  <testcase name="Cypress web security Validating visiting two different domains" time="7.686" classname="Validating visiting two different domains"></testcase>
+  
+  <testcase name="Cypress web security Validating visiting two different domains via user actions" time="2.602" classname="Validating visiting two different domains via user actions"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:55" tests="0" file="cypress\e2e\webdriver-uni\data-tables.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Handling data via webdriveruni" timestamp="2026-02-12T23:29:55" tests="1" time="2.943" failures="0">
+  
+  <testcase name="Handling data via webdriveruni calculate and assert the age of a user based on last name" time="2.858" classname="calculate and assert the age of a user based on last name"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:46" tests="0" file="cypress\e2e\webdriver-uni\selector-examples.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Selector Examples on WebDriverUni" timestamp="2026-02-12T23:30:46" tests="1" time="1.551" failures="0">
+  
+  <testcase name="Selector Examples on WebDriverUni Examples of  selectors via WebDriverUni" time="1.480" classname="Examples of  selectors via WebDriverUni"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:13" tests="0" file="cypress\e2e\webdriver-uni\file-upload.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Test file upload via webdriveruni" timestamp="2026-02-12T23:30:13" tests="2" time="4.743" failures="0">
+  
+  <testcase name="Test file upload via webdriveruni upload a file..." time="3.463" classname="upload a file..."></testcase>
+  
+  <testcase name="Test file upload via webdriveruni upload a no file..." time="1.084" classname="upload a no file..."></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:30:20" tests="0" file="cypress\e2e\webdriver-uni\iframe.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Handling Iframe and modals" timestamp="2026-02-12T23:30:20" tests="1" time="4.461" failures="0">
+  
+  <testcase name="Handling Iframe and modals Handle webdriveruni iframe    " time="4.398" classname="Handle webdriveruni iframe    "></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:45" tests="0" file="cypress\e2e\webdriver-uni\contact-us.js" time="0.000" failures="0"></testsuite>
+<testsuite name="test contact us form via webdriveruni" timestamp="2026-02-12T23:29:45" tests="2" time="7.343" failures="0">
+  
+  <testcase name="test contact us form via webdriveruni should be able to submit a successful submission via contact us form" time="5.613" classname="should be able to submit a successful submission via contact us form"></testcase>
+  
+  <testcase name="test contact us form via webdriveruni should not be able to submit a successful submission via contact us form as all fields are required" time="1.617" classname="should not be able to submit a successful submission via contact us form as all fields are required"></testcase>
+  
+</testsuite>
+
+<testsuite name="Root Suite" timestamp="2026-02-12T23:29:40" tests="0" file="cypress\e2e\webdriver-uni\checkboxes.js" time="0.000" failures="0"></testsuite>
+<testsuite name="Verify checkboxes via webdriveruni" timestamp="2026-02-12T23:29:40" tests="3" time="2.668" failures="0">
+  
+  <testcase name="Verify checkboxes via webdriveruni Check and validate checkbox" time="1.638" classname="Check and validate checkbox"></testcase>
+  
+  <testcase name="Verify checkboxes via webdriveruni Uncheck and validate checkbox" time="0.404" classname="Uncheck and validate checkbox"></testcase>
+  
+  <testcase name="Verify checkboxes via webdriveruni Check multiples checkboxes" time="0.540" classname="Check multiples checkboxes"></testcase>
+  
+</testsuite>
+
+</testsuites>

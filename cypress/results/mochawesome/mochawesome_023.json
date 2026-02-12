@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:19:19.595Z",
+    "end": "2026-02-12T23:19:36.262Z",
+    "duration": 16667,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e2cdd671-5427-421e-8c04-dc008c53cb6e",
+      "title": "",
+      "fullFile": "cypress\\e2e\\automation-test-store\\alias-invoke.js",
+      "file": "cypress\\e2e\\automation-test-store\\alias-invoke.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5c06ff36-0b71-4f1f-9250-958e4086f9ee",
+          "title": "Alias and invoke",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate a specific hair product",
+              "fullTitle": "Alias and invoke Validate a specific hair product",
+              "timedOut": null,
+              "duration": 8026,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"a[href*='product/category&path=']\").contains(\"Hair Care\").click();\n// Instead of using variables to interact with elements between tests or commands\n// We can use alias and invoke to achieve the same\n// The \".as\" is an aliasing command that allows us to store a reference to a value\n// The \"invoke\" command allows us to call a function on the previously yielded subject\n// So in this case we are calling the \"text\" function to get the text content of the element, and the element is stored as an alias called \"productThumbnail\"\ncy.get(\".fixed_wrapper .prdocutname\").eq(0).invoke('text').as(\"productThumbnail\");\ncy.get(\"@productThumbnail\").its(\"length\").should(\"be.gt\", 5);\ncy.get(\"@productThumbnail\").should(\"contain\", \"Seaweed Conditioner\");",
+              "err": {},
+              "uuid": "70b18c64-1c06-463d-ae9a-d31b035d3bad",
+              "parentUUID": "5c06ff36-0b71-4f1f-9250-958e4086f9ee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate product thumbnail",
+              "fullTitle": "Alias and invoke Validate product thumbnail",
+              "timedOut": null,
+              "duration": 3932,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".thumbnail\").as(\"productThumbnail\");\ncy.get(\"@productThumbnail\").should(\"have.length\", 16);\ncy.get(\"@productThumbnail\").find(\".productcart\").invoke(\"attr\", \"title\").should(\"include\", \"Add to Cart\");",
+              "err": {},
+              "uuid": "31252200-8c8b-4f74-ab41-b61b6d21a124",
+              "parentUUID": "5c06ff36-0b71-4f1f-9250-958e4086f9ee",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Calculate total of sale and normal products",
+              "fullTitle": "Alias and invoke Calculate total of sale and normal products",
+              "timedOut": null,
+              "duration": 1786,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\".thumbnail\").as(\"productThumbnail\");\ncy.get(\".thumbnail\").find(\".oneprice\").invoke(\"text\").as(\"itemPrice\");\ncy.get(\".thumbnail\").find(\".pricenew\").invoke(\"text\").as(\"saleItemPrice\");\nvar itemsTotal = 0;\ncy.get(\"@itemPrice\").then($linkText => {\n  // Splitting the text based on $ sign to get individual prices and not the full text\n  let itemsTotalPrice = 0;\n  let itemPrice = $linkText.split(\"$\");\n  let i;\n  for (i = 0; i < itemPrice.length; i++) {\n    cy.log(itemPrice[i]);\n    itemsTotalPrice += Number(itemPrice[i]);\n  }\n  itemsTotal += itemsTotalPrice;\n  cy.log(\"Non sale items:  \" + itemsTotalPrice);\n});\ncy.get(\"@saleItemPrice\").then($linkText => {\n  // Splitting the text based on $ sign to get individual prices and not the full text\n  let salesTotalPrice = 0;\n  let salePrice = $linkText.split(\"$\");\n  let i;\n  for (i = 0; i < salePrice.length; i++) {\n    cy.log(salePrice[i]);\n    salesTotalPrice += Number(salePrice[i]);\n  }\n  itemsTotal += salesTotalPrice;\n  cy.log(\"Sale items total: \" + salesTotalPrice);\n}).then(() => {\n  cy.log(\"Total of all items: \" + itemsTotal);\n  expect(itemsTotal).to.equal(673);\n});",
+              "err": {},
+              "uuid": "40a846f0-dc2e-4bf2-be8c-8756f0b2dd08",
+              "parentUUID": "5c06ff36-0b71-4f1f-9250-958e4086f9ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "70b18c64-1c06-463d-ae9a-d31b035d3bad",
+            "31252200-8c8b-4f74-ab41-b61b6d21a124",
+            "40a846f0-dc2e-4bf2-be8c-8756f0b2dd08"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 13744,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

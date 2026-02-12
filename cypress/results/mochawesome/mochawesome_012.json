@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:05:29.301Z",
+    "end": "2026-02-12T23:05:31.754Z",
+    "duration": 2453,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "060c71e6-c873-438b-be0f-f43477e9914f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\data-tables.js",
+      "file": "cypress\\e2e\\webdriver-uni\\data-tables.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "864c62a9-e73b-4b95-839a-f5df9987842e",
+          "title": "Handling data via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "calculate and assert the age of a user based on last name",
+              "fullTitle": "Handling data via webdriveruni calculate and assert the age of a user based on last name",
+              "timedOut": null,
+              "duration": 2376,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// For we looking for the last name we first need to get the second column of the table which contains the last names of the users\n// So we use the nth-child selector to get the second column of the table, then we loop through each element in that column and check if it includes the last name we are looking for, if it does then we get the age of that user which is in the next sibling element and assert that it is equal to the expected age.\ncy.get(\"#thumbnail-1 tr td:nth-child(2)\").each(($el, index, $list) => {\n  const text = $el.text();\n  if (text.includes(\"Woods\")) {\n    // Here we first get the current element which is the last name, then we use .next() to get the next sibling element which contains the age of the user.\n    cy.get(\"#thumbnail-1 tr td:nth-child(2)\").eq(index).next().then(age => {\n      const userAge = age.text();\n      expect(userAge).to.eq(\"80\");\n    });\n  }\n});",
+              "err": {},
+              "uuid": "8cd48a8e-1e9b-4a29-b64a-1b14d0e097d6",
+              "parentUUID": "864c62a9-e73b-4b95-839a-f5df9987842e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8cd48a8e-1e9b-4a29-b64a-1b14d0e097d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2376,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

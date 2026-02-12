@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.945" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-12T23:29:55" tests="0" file="cypress\e2e\webdriver-uni\data-tables.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Handling data via webdriveruni" timestamp="2026-02-12T23:29:55" tests="1" time="2.943" failures="0">
+    <testcase name="Handling data via webdriveruni calculate and assert the age of a user based on last name" time="2.858" classname="calculate and assert the age of a user based on last name">
+    </testcase>
+  </testsuite>
+</testsuites>

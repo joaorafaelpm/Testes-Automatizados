@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="1.553" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-12T23:30:46" tests="0" file="cypress\e2e\webdriver-uni\selector-examples.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Selector Examples on WebDriverUni" timestamp="2026-02-12T23:30:46" tests="1" time="1.551" failures="0">
+    <testcase name="Selector Examples on WebDriverUni Examples of  selectors via WebDriverUni" time="1.480" classname="Examples of  selectors via WebDriverUni">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,164 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:06:00.372Z",
+    "end": "2026-02-12T23:06:05.659Z",
+    "duration": 5287,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8f1b7f2a-468f-426e-a295-c855a73a4867",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\js-alerts.js",
+      "file": "cypress\\e2e\\webdriver-uni\\js-alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bb800ae8-09ad-4d1b-adcc-efbd8bb04677",
+          "title": "Handle js alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Confirm the js alert contains the correct text",
+              "fullTitle": "Handle js alerts Confirm the js alert contains the correct text",
+              "timedOut": null,
+              "duration": 2760,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#button1\").click();\ncy.on(\"window:alert\", str => {\n  expect(str).to.eq(\"I am an alert box!\");\n});",
+              "err": {},
+              "uuid": "7bbb5d44-5bab-4cc8-b808-75a594cb1ea4",
+              "parentUUID": "bb800ae8-09ad-4d1b-adcc-efbd8bb04677",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicks ok",
+              "fullTitle": "Handle js alerts Validate js confirm alert box works correctly when clicks ok",
+              "timedOut": null,
+              "duration": 703,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#button4\").click();\ncy.on(\"window:alert\", str => {\n  // When we return true the alert is accepted (clicked ok)\n  return true;\n});\ncy.get(\"#confirm-alert-text\").contains(\"You pressed OK!\");",
+              "err": {},
+              "uuid": "d7497cc8-8fb1-4781-a478-58e5fc7423d2",
+              "parentUUID": "bb800ae8-09ad-4d1b-adcc-efbd8bb04677",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicks cancel",
+              "fullTitle": "Handle js alerts Validate js confirm alert box works correctly when clicks cancel",
+              "timedOut": null,
+              "duration": 798,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#button4\").click();\ncy.on(\"window:confirm\", str => {\n  // When we return true the alert is accepted (clicked ok)\n  return false;\n});\ncy.get(\"#confirm-alert-text\").contains(\"You pressed Cancel!\");",
+              "err": {},
+              "uuid": "98a23e53-c9c0-4d7f-b11f-edbf931fea32",
+              "parentUUID": "bb800ae8-09ad-4d1b-adcc-efbd8bb04677",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box using a stub",
+              "fullTitle": "Handle js alerts Validate js confirm alert box using a stub",
+              "timedOut": null,
+              "duration": 871,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const stub = cy.stub();\ncy.on(\"window:confirm\", stub);\ncy.get(\"#button4\").click().then(() => {\n  expect(stub.getCall(0)).to.be.calledWith(\"Press a button!\");\n}).then(() => {\n  return true;\n}).then(() => {\n  cy.get(\"#confirm-alert-text\").contains(\"You pressed OK!\");\n});",
+              "err": {},
+              "uuid": "2c1dfedc-73f3-40e6-b476-66d39e2b9c89",
+              "parentUUID": "bb800ae8-09ad-4d1b-adcc-efbd8bb04677",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7bbb5d44-5bab-4cc8-b808-75a594cb1ea4",
+            "d7497cc8-8fb1-4781-a478-58e5fc7423d2",
+            "98a23e53-c9c0-4d7f-b11f-edbf931fea32",
+            "2c1dfedc-73f3-40e6-b476-66d39e2b9c89"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5132,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

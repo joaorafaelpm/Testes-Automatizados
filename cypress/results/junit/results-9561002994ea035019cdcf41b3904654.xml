@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="3.193" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-12T23:30:40" tests="0" file="cypress\e2e\webdriver-uni\radio-buttons.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Verify radio buttons via webdriveruni" timestamp="2026-02-12T23:30:40" tests="2" time="3.190" failures="0">
+    <testcase name="Verify radio buttons via webdriveruni Check specific radio buttons" time="2.418" classname="Check specific radio buttons">
+    </testcase>
+    <testcase name="Verify radio buttons via webdriveruni Check specific radio buttons and validate" time="0.688" classname="Check specific radio buttons and validate">
+    </testcase>
+  </testsuite>
+</testsuites>

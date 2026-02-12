@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:04:42.141Z",
+    "end": "2026-02-12T23:04:54.318Z",
+    "duration": 12177,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2d5cadf8-31e8-40bb-8822-3215794c6d9b",
+      "title": "",
+      "fullFile": "cypress\\e2e\\other\\same-origin-policy.js",
+      "file": "cypress\\e2e\\other\\same-origin-policy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a16bccb9-17c2-4475-958e-4f47fb6a465e",
+          "title": "Cypress web security",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validating visiting two different domains",
+              "fullTitle": "Cypress web security Validating visiting two different domains",
+              "timedOut": null,
+              "duration": 9504,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/\");\ncy.origin(\"https://automationteststore.com/\", () => {\n  cy.visit(\"/\");\n});",
+              "err": {},
+              "uuid": "777aabf5-df68-4234-9ab9-43692507096a",
+              "parentUUID": "a16bccb9-17c2-4475-958e-4f47fb6a465e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validating visiting two different domains via user actions",
+              "fullTitle": "Cypress web security Validating visiting two different domains via user actions",
+              "timedOut": null,
+              "duration": 2566,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com/\");\n// This method works beacuse we are removing the target attribute which forces the link to open in the same tab\n// And we remove the google security policy so its not triggered\ncy.get(\"#automation-test-store\").invoke(\"removeAttr\", \"target\").click({\n  force: true\n});",
+              "err": {},
+              "uuid": "af028cf1-5ce4-44b3-9c0d-05d2295f17f3",
+              "parentUUID": "a16bccb9-17c2-4475-958e-4f47fb6a465e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "777aabf5-df68-4234-9ab9-43692507096a",
+            "af028cf1-5ce4-44b3-9c0d-05d2295f17f3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 12070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

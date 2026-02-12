@@ -13,6 +13,10 @@ describe("Add multiple itens to basket", () => {
     });
   });
   beforeEach(() => {
+    // Both commands will clear the local storage and cookies
+    // Cypress already delete all the cookies and local storage between the tests, but if you want to do it to clear a specific cookie or local storage, you can do it like this:
+    // cy.clearLocalStorage();
+    // cy.clearCookies();
     autoStore_HomePage.accessHomepage();
     cy.get("a[href*='product/category&path=']").contains("Hair Care").click();
   });

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="11.695" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2026-02-12T23:28:11" tests="0" file="cypress\e2e\automation-test-store\contact-us.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="test contact us form via Automation Test Store" timestamp="2026-02-12T23:28:11" tests="1" time="11.692" failures="0">
+    <testcase name="test contact us form via Automation Test Store should be able to submit a successful submission via contact us form" time="8.927" classname="should be able to submit a successful submission via contact us form">
+    </testcase>
+  </testsuite>
+</testsuites>

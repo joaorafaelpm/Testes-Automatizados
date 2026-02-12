@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:22:08.605Z",
+    "end": "2026-02-12T23:22:11.796Z",
+    "duration": 3191,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "209cfaf3-2687-4e55-826e-752278f12053",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\radio-buttons.js",
+      "file": "cypress\\e2e\\webdriver-uni\\radio-buttons.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7630a4c9-d23f-42c5-9b80-f86e446ab52b",
+          "title": "Verify radio buttons via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check specific radio buttons",
+              "fullTitle": "Verify radio buttons via webdriveruni Check specific radio buttons",
+              "timedOut": null,
+              "duration": 2437,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='radio']\").first().check();\ncy.get(\"input[type='radio']\").eq(1).check();",
+              "err": {},
+              "uuid": "11cd6f1c-5f53-4fd7-8cfb-e13365340dbd",
+              "parentUUID": "7630a4c9-d23f-42c5-9b80-f86e446ab52b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check specific radio buttons and validate",
+              "fullTitle": "Verify radio buttons via webdriveruni Check specific radio buttons and validate",
+              "timedOut": null,
+              "duration": 696,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"[value='lettuce']\").should(\"not.be.checked\");\ncy.get(\"[value='pumpkin']\").should(\"be.checked\");\ncy.get(\"[value='lettuce']\").check().should(\"be.checked\");\ncy.get(\"[value='pumpkin']\").should(\"not.be.checked\");\ncy.get(\"[value='cabbage']\").should(\"be.disabled\");",
+              "err": {},
+              "uuid": "41010a6b-cf90-4f7c-916d-62bdcd71600d",
+              "parentUUID": "7630a4c9-d23f-42c5-9b80-f86e446ab52b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "11cd6f1c-5f53-4fd7-8cfb-e13365340dbd",
+            "41010a6b-cf90-4f7c-916d-62bdcd71600d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3133,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

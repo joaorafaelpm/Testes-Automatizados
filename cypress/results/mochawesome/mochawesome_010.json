@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:05:13.729Z",
+    "end": "2026-02-12T23:05:16.398Z",
+    "duration": 2669,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c0fb9a42-6245-4bef-a5f2-83a2c7ff8855",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\checkboxes.js",
+      "file": "cypress\\e2e\\webdriver-uni\\checkboxes.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2b93d8e8-d411-4ee4-b66d-fe3eb9a64d04",
+          "title": "Verify checkboxes via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Check and validate checkbox",
+              "timedOut": null,
+              "duration": 1611,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#checkboxes > :nth-child(1) > input\").as(\"option-1\");\ncy.get(\"@option-1\").check().should(\"be.checked\");",
+              "err": {},
+              "uuid": "3e173f46-5d50-46b0-8213-269c20c3d10e",
+              "parentUUID": "2b93d8e8-d411-4ee4-b66d-fe3eb9a64d04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uncheck and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Uncheck and validate checkbox",
+              "timedOut": null,
+              "duration": 412,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"#checkboxes > :nth-child(5) > input\").as(\"option-5\");\ncy.get(\"@option-5\").uncheck().should(\"not.be.checked\");",
+              "err": {},
+              "uuid": "6bc279f9-4d30-4ff2-81a6-0ad4480c23cd",
+              "parentUUID": "2b93d8e8-d411-4ee4-b66d-fe3eb9a64d04",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check multiples checkboxes",
+              "fullTitle": "Verify checkboxes via webdriveruni Check multiples checkboxes",
+              "timedOut": null,
+              "duration": 543,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"input[type='checkbox']\").check([\"option-1\", \"option-2\", \"option-3\", \"option-4\"]).should(\"be.checked\");",
+              "err": {},
+              "uuid": "81286d8a-5d56-440b-8739-6cca982a13f1",
+              "parentUUID": "2b93d8e8-d411-4ee4-b66d-fe3eb9a64d04",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e173f46-5d50-46b0-8213-269c20c3d10e",
+            "6bc279f9-4d30-4ff2-81a6-0ad4480c23cd",
+            "81286d8a-5d56-440b-8739-6cca982a13f1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

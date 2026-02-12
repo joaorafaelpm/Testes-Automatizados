@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:20:49.252Z",
+    "end": "2026-02-12T23:20:55.606Z",
+    "duration": 6354,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f49dce8f-a06d-4751-afc5-a389c18838ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\autocomplete-dropdown-list.js",
+      "file": "cypress\\e2e\\webdriver-uni\\autocomplete-dropdown-list.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "599957a1-9cc3-415f-bad5-19d46aae3312",
+          "title": "Interact with autocomplete dropdown lists",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Select specific product via autocomplete list",
+              "fullTitle": "Interact with autocomplete dropdown lists Select specific product via autocomplete list",
+              "timedOut": null,
+              "duration": 6284,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "homePagePO.visitHomePage();\ncy.get(\"#autocomplete-textfield\").invoke(\"removeAttr\", \"target\").click({\n  force: true\n});\ncy.get('#myInput').as('myInput').type(\"A\");\ncy.get(\"#myInputautocomplete-list > *\").each(($el, index, $list) => {\n  const prod = $el.text();\n  const productToSelect = \"Avacado\";\n  if (prod === productToSelect) {\n    cy.wrap($el).click();\n    cy.get(\"#submit-button\").click();\n    cy.url().should(\"include\", \"Avacado\");\n  }\n}).then(() => {\n  cy.get(\"@myInput\").type(\"G\");\n  cy.get(\"#myInputautocomplete-list > *\").each(($el, index, $list) => {\n    const prod = $el.text();\n    const productToSelect = \"Grapes\";\n    if (prod === productToSelect) {\n      // The command \"trigger\" trigger an event in a DOM element, such as a click, or a mouseover, etc.\n      // In this case i'll not use this method just to show that we can use the \"wrap\" method to wrap a DOM element and then use the \"click\" method to click on it.\n      // $el.trigger(\"click\");\n      cy.wrap($el).click();\n      cy.get(\"#submit-button\").click();\n      cy.url().should(\"include\", \"Grapes\");\n    }\n  });\n});",
+              "err": {},
+              "uuid": "7b2d80d6-fb14-420e-b988-f901ec4e0ffd",
+              "parentUUID": "599957a1-9cc3-415f-bad5-19d46aae3312",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7b2d80d6-fb14-420e-b988-f901ec4e0ffd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6284,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

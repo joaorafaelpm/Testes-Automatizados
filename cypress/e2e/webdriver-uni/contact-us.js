@@ -8,6 +8,9 @@ describe("test contact us form via webdriveruni", () => {
   const homePage_PO = new HomePage_PO();
 
   beforeEach(()=> {
+    // This command is a good way to set a viewport and test the application as a mobile device
+    // You can also do it as a global configuration
+    // cy.viewport(550, 750);
     homePage_PO.visitCustomUrl("/Contact-Us/contactus.html");
   })
   before(()=> {
@@ -26,7 +29,7 @@ describe("test contact us form via webdriveruni", () => {
     cy.url().should("include", "contactus");
 
     // Another way to debug (for example, I need my API to make a request in less than 3s, or smth like that)
-    cy.wait(3000);
+    // cy.wait(3000);
     contactUsPO.contactForm_Submission(
     Cypress.env("first_name"),
     data.last_name,

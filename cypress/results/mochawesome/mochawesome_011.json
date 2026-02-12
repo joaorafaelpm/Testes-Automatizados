@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-02-12T23:05:19.445Z",
+    "end": "2026-02-12T23:05:26.685Z",
+    "duration": 7240,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f67071bc-e736-44d6-8054-da72143ac727",
+      "title": "",
+      "fullFile": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "file": "cypress\\e2e\\webdriver-uni\\contact-us.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e8db02a8-b298-4f6d-b671-0094f1264c60",
+          "title": "test contact us form via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should be able to submit a successful submission via contact us form",
+              "fullTitle": "test contact us form via webdriveruni should be able to submit a successful submission via contact us form",
+              "timedOut": null,
+              "duration": 5396,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.document().should(\"have.property\", \"charset\").and(\"eq\", \"UTF-8\");\n// cy.pause()\ncy.title().should(\"include\", \"WebDriver | Contact Us\");\n// A usefull way to improve our debug in cypress\n// cy.url().pause().should(\"include\", \"contactus\");\ncy.url().should(\"include\", \"contactus\");\n// Another way to debug (for example, I need my API to make a request in less than 3s, or smth like that)\n// cy.wait(3000);\ncontactUsPO.contactForm_Submission(Cypress.env(\"first_name\"), data.last_name, data.email, data.comment, \"h1\", \"Thank You for your Message!\");",
+              "err": {},
+              "uuid": "9c815131-e840-4577-9a13-fb79dcc2093c",
+              "parentUUID": "e8db02a8-b298-4f6d-b671-0094f1264c60",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should not be able to submit a successful submission via contact us form as all fields are required",
+              "fullTitle": "test contact us form via webdriveruni should not be able to submit a successful submission via contact us form as all fields are required",
+              "timedOut": null,
+              "duration": 1746,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "contactUsPO.contactForm_Submission(data.first_name, data.last_name, \" \", data.comment, \"body\", \"Error: Invalid email address\");",
+              "err": {},
+              "uuid": "01993a84-6ab3-4223-aa45-18bebcc08505",
+              "parentUUID": "e8db02a8-b298-4f6d-b671-0094f1264c60",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9c815131-e840-4577-9a13-fb79dcc2093c",
+            "01993a84-6ab3-4223-aa45-18bebcc08505"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
