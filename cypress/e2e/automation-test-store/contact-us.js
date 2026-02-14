@@ -6,7 +6,13 @@ describe("test contact us form via Automation Test Store", () => {
     cy.fixture("userDetails").as("user");
   })
 
-  it("should be able to submit a successful submission via contact us form", () => {
+  it("should be able to submit a successful submission via contact us form", 
+    {
+    retries: {
+      runMode: 2,
+      openMode: 2
+    }
+  } ,() => {
     cy.visit("https://automationteststore.com/");
     cy.get("a[href$='contact']").click()
     // The same thing was make above using xpath
