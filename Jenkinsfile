@@ -28,7 +28,7 @@ pipeline {
                         // Executes a batch command to update the dependencies to their latest allowed versions.
                         bat 'npm update'
                         // Executes the specific Cypress test script defined in the 'scripts' section of your package.json.
-                        bat 'npm run triggerAllTests-autoTestStore-dashboard'
+                        bat 'npm run $Script%'
                     }
                 }
                 stage('Slave Node 2') {
@@ -39,7 +39,7 @@ pipeline {
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
                         bat 'npm install'
                         bat 'npm update'
-                        bat 'npm run triggerAllTests-autoTestStore-dashboard'
+                        bat 'npm run $Script%'
                     }
                 }
             }
