@@ -22,7 +22,7 @@ pipeline {
                     // The 'steps' block contains the actual commands/tasks to be executed in this stage.
                     steps {
                         // Clones the source code from the specified GitHub repository into the workspace.
-                        git url: 'https://github.com/joaorafaelpm/Automation-Tests'
+                        git url: 'https://github.com/joaorafaelpm/Automation-Tests.git'
                         // Executes a Windows batch command to install the dependencies listed in package.json.
                         bat 'npm install'
                         // Executes a batch command to update the dependencies to their latest allowed versions.
@@ -36,7 +36,7 @@ pipeline {
                         label "remote_node2"
                     }
                     steps {
-                        git url: 'https://github.com/joaorafaelpm/Automation-Tests'
+                        git url: 'https://github.com/joaorafaelpm/Automation-Tests.git'
                         bat 'npm install'
                         bat 'npm update'
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
