@@ -21,6 +21,7 @@ pipeline {
                     }
                     // The 'steps' block contains the actual commands/tasks to be executed in this stage.
                     steps {
+                        // Clones the source code from the 'main' branch of the specified GitHub repository.
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
                         // Executes a Windows batch command to install the dependencies listed in package.json.
                         bat 'npm install'
@@ -30,14 +31,21 @@ pipeline {
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
                     }
                 }
+                // Defines the second parallel branch/stage named 'Slave Node 2'.
                 stage('Slave Node 2') {
+                    // Overrides the agent to run this stage on a machine labeled "remote_node2".
                     agent {
                         label "remote_node2"
                     }
+                    // The steps to execute on the second node.
                     steps {
+                        // Clones the source code again on this specific node (workspaces are not shared between nodes).
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
+                        // Installs dependencies on this node.
                         bat 'npm install'
+                        // Updates dependencies on this node.
                         bat 'npm update'
+                        // Runs the same test script. If using Cypress Dashboard, this contributes to the parallel run.
                         bat 'npm run triggerAllTests-autoTestStore-dashboard'
                     }
                 }
