@@ -21,7 +21,7 @@ pipeline {
                     }
                     // The 'steps' block contains the actual commands/tasks to be executed in this stage.
                     steps {
-                        cleanWs()
+                        
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
                         // Executes a Windows batch command to install the dependencies listed in package.json.
                         bat 'npm install'
@@ -36,8 +36,6 @@ pipeline {
                         label "remote_node2"
                     }
                     steps {
-                        cleanWs()
-
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
                         bat 'npm install'
                         bat 'npm update'
