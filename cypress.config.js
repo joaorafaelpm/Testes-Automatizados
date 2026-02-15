@@ -1,5 +1,6 @@
 const { defineConfig } = require("cypress");
-
+const dotenv = require("dotenv");
+dotenv.config();
 const fs = require("fs-extra");
 const path = require("path");
 
@@ -28,7 +29,7 @@ module.exports = defineConfig({
     // By using the following command you can record your tests in the Cypress Dashboard and have access to all the features that it provides, such as video recording, screenshots, test results, etc.
     // But for that work you need to add the line "projectId" with your cypress dashboard project id to work, and also you need to run the command "npx cypress run --record --key your-cypress-dashboard-record-key" to record your tests in the Cypress Dashboard
     // npx cypress run --record --key 788adb10-f6c6-4207-b1e8-68762272c7bf
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
+    specPattern: "cypress/e2e/**/*.{js,feature}",
     // excludeSpecPattern: "cypress/e2e/other/*.js",
     chromeWebSecurity: false,
     projectId: "1vvroh",
@@ -54,6 +55,7 @@ module.exports = defineConfig({
     env: {
       first_name: "Sarah",
       webdriveruni_url: "http://www.webdriveruniversity.com",
+      access_token: process.env.ACCESS_TOKEN
     },
   },
 });
