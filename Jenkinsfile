@@ -32,11 +32,12 @@ pipeline {
                     }
                 }
                 stage('Slave Node 2') {
-                    cleanWs()
                     agent {
                         label "remote_node2"
                     }
                     steps {
+                        cleanWs()
+
                         git branch: 'main', url: 'https://github.com/joaorafaelpm/Automation-Tests'
                         bat 'npm install'
                         bat 'npm update'
