@@ -24,7 +24,8 @@
     "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/e2e/automation-test-store/*",
     "triggerAllTests-autoTestStore-dashboard": "dotenv -e .env -- npx cypress run --spec cypress/e2e/automation-test-store/* --record --parallel",
     "triggerAllTests-autoTestStore-dashboard-chrome": "dotenv -e .env -- npx cypress run --spec cypress/e2e/automation-test-store/* --record --parallel --browser chrome --headed",
-    "junit-merge": "npx junit-merge -d cypress/results/junit -o cypress/results/junit/results.xml",
+    "triggerAllTests-cucumberTests": "npx cypress run --spec cypress/e2e/webdriver-uni/features/*.feature --browser chrome",
+    
     "delete-junit-report": "rm -rf cypress/results/junit/results.xml",
     "delete-results": "rm -rf cypress/results/* || true",
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
@@ -34,16 +35,15 @@
     "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser chrome --headed"
   },
   "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
     "@cypress/xpath": "^2.0.3",
     "cypress": "^15.9.0",
     "cypress-multi-reporters": "^2.0.5",
-    "dotenv-cli": "^11.0.0",
+    "dotenv": "^17.3.1",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.4",
     "mochawesome-merge": "^5.1.1",
     "mochawesome-report-generator": "^6.3.2"
-  },
-  "dependencies": {
-    "dotenv": "^17.3.1"
   }
 }
